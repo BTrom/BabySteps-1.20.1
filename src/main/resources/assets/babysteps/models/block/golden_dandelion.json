@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "babysteps:block/golden_dandelion"
+  }
+}

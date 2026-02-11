@@ -1,0 +1,201 @@
+{
+  "entity/chicken_baby_ambient": {
+    "sounds": [
+      "babysteps:entity/chicken_baby_ambient1",
+      "babysteps:entity/chicken_baby_ambient2"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_chicken.ambient"
+  },
+  "entity/chicken_baby_hurt": {
+    "sounds": [
+      "babysteps:entity/chicken_baby_hurt1",
+      "babysteps:entity/chicken_baby_hurt2",
+      "babysteps:entity/chicken_baby_hurt3",
+      "babysteps:entity/chicken_baby_hurt4"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_chicken.hurt"
+  },
+  "entity/chicken_baby_death": {
+    "sounds": [
+      "babysteps:entity/chicken_baby_death"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_chicken.death"
+  },
+  "entity/baby_pig_ambient": {
+    "sounds": [
+      "babysteps:entity/pig_baby_ambient1",
+      "babysteps:entity/pig_baby_ambient2",
+      "babysteps:entity/pig_baby_ambient3",
+      "babysteps:entity/pig_baby_ambient4",
+      "babysteps:entity/pig_baby_ambient5",
+      "babysteps:entity/pig_baby_ambient6"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_pig.ambient"
+  },
+  "entity/baby_pig_hurt": {
+    "sounds": [
+      "babysteps:entity/pig_baby_hit1",
+      "babysteps:entity/pig_baby_hit2",
+      "babysteps:entity/pig_baby_hit3"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_pig.hurt"
+  },
+  "entity/baby_pig_death": {
+    "sounds": [
+      "babysteps:entity/pig_baby_death"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_pig.death"
+  },
+  "entity/baby_pig_step": {
+    "sounds": [
+      "babysteps:entity/pig_baby_step1",
+      "babysteps:entity/pig_baby_step2",
+      "babysteps:entity/pig_baby_step3",
+      "babysteps:entity/pig_baby_step4",
+      "babysteps:entity/pig_baby_step5"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "entity/baby_cat_ambient": {
+    "sounds": [
+      "babysteps:entity/cat_baby_ambient1",
+      "babysteps:entity/cat_baby_ambient2",
+      "babysteps:entity/cat_baby_ambient3",
+      "babysteps:entity/cat_baby_ambient4",
+      "babysteps:entity/cat_baby_ambient5",
+      "babysteps:entity/cat_baby_ambient6",
+      "babysteps:entity/cat_baby_ambient7"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_cat.ambient"
+  },
+  "entity/baby_cat_stray_ambient": {
+    "sounds": [
+      "babysteps:entity/cat_baby_ambient1",
+      "babysteps:entity/cat_baby_ambient2",
+      "babysteps:entity/cat_baby_ambient3",
+      "babysteps:entity/cat_baby_ambient4",
+      "babysteps:entity/cat_baby_ambient5",
+      "babysteps:entity/cat_baby_ambient6",
+      "babysteps:entity/cat_baby_ambient7"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_cat.ambient"
+  },
+  "entity/baby_cat_purr": {
+    "sounds": [
+      "babysteps:entity/cat_baby_ambient1",
+      "babysteps:entity/cat_baby_ambient2",
+      "babysteps:entity/cat_baby_ambient3",
+      "babysteps:entity/cat_baby_ambient4",
+      "babysteps:entity/cat_baby_ambient5",
+      "babysteps:entity/cat_baby_ambient6",
+      "babysteps:entity/cat_baby_ambient7"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_cat.purr"
+  },
+  "entity/baby_cat_purreow": {
+    "sounds": [
+      "babysteps:entity/cat_baby_ambient1",
+      "babysteps:entity/cat_baby_ambient2",
+      "babysteps:entity/cat_baby_ambient3",
+      "babysteps:entity/cat_baby_ambient4",
+      "babysteps:entity/cat_baby_ambient5",
+      "babysteps:entity/cat_baby_ambient6",
+      "babysteps:entity/cat_baby_ambient7"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_cat.ambient"
+  },
+  "entity/baby_cat_hiss": {
+    "sounds": [
+      {
+        "name": "mob/cat/hiss1",
+        "volume": 0.4,
+        "pitch": 2.0
+      },
+      {
+        "name": "mob/cat/hiss2",
+        "volume": 0.4,
+        "pitch": 2.0
+      },
+      {
+        "name": "mob/cat/hiss3",
+        "volume": 0.4,
+        "pitch": 2.0
+      }
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_cat.hiss"
+  },
+  "entity/baby_cat_hurt": {
+    "sounds": [
+      "babysteps:entity/cat_baby_hurt1",
+      "babysteps:entity/cat_baby_hurt2",
+      "babysteps:entity/cat_baby_hurt3"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_cat.hurt"
+  },
+  "entity/baby_cat_death": {
+    "sounds": [
+      "babysteps:entity/cat_baby_death"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_cat.death"
+  },
+  "entity/baby_cat_eat": {
+    "sounds": [
+      {
+        "name": "mob/cat/eat1",
+        "pitch": 2.0
+      },
+      {
+        "name": "mob/cat/eat2",
+        "pitch": 2.0
+      }
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_cat.eat"
+  },
+  "entity/baby_cat_beg_for_food": {
+    "sounds": [
+      "babysteps:entity/cat_baby_ambient1",
+      "babysteps:entity/cat_baby_ambient2",
+      "babysteps:entity/cat_baby_ambient3",
+      "babysteps:entity/cat_baby_ambient4",
+      "babysteps:entity/cat_baby_ambient5",
+      "babysteps:entity/cat_baby_ambient6",
+      "babysteps:entity/cat_baby_ambient7"
+    ],
+    "subtitle": "babysteps.sound.subtitle.baby_cat.beg_for_food"
+  },
+  "entity/turtle_hurt_baby": {
+    "sounds": [
+      "babysteps:entity/baby_turtle_hurt1",
+      "babysteps:entity/baby_turtle_hurt2"
+    ],
+    "subtitle": "babysteps.sound.subtitle.turtle.hurt_baby"
+  },
+  "entity/turtle_death_baby": {
+    "sounds": [
+      "babysteps:entity/baby_turtle_death1",
+      "babysteps:entity/baby_turtle_death2"
+    ],
+    "subtitle": "babysteps.sound.subtitle.turtle.death_baby"
+  },
+  "entity/turtle_shamble_baby": {
+    "sounds": [
+      "babysteps:entity/baby_turtle_step1",
+      "babysteps:entity/baby_turtle_step2",
+      "babysteps:entity/baby_turtle_step3",
+      "babysteps:entity/baby_turtle_step4"
+    ],
+    "subtitle": "babysteps.sound.subtitle.turtle.shamble_baby"
+  },
+  "item/golden_dandelion_unuse": {
+    "sounds": [
+      "babysteps:item/golden_dandelion_unuse"
+    ],
+    "subtitle": "babysteps.sound.subtitle.golden_dandelion.unuse"
+  },
+  "item/golden_dandelion_use": {
+    "sounds": [
+      "babysteps:item/golden_dandelion_use"
+    ],
+    "subtitle": "babysteps.sound.subtitle.golden_dandelion.use"
+  }
+}

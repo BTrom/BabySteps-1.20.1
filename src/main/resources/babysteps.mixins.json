@@ -1,0 +1,38 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.botrom.babysteps.mixins",
+  "refmap": "babysteps.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "client.renderers.BabyBeeRendererMixin",
+    "client.renderers.BabyCatRendererMixin",
+    "client.renderers.BabyDolphinRendererMixin",
+    "client.renderers.BabyFoxRendererMixin",
+    "client.renderers.BabyGoatRendererMixin",
+    "client.renderers.BabyTurtleRendererMixin",
+    "client.renderers.ChickenRendererMixin",
+    "client.renderers.CowRendererMixin",
+    "client.renderers.GlowSquidRendererMixin",
+    "client.renderers.MobRendererMixin",
+    "client.renderers.PigRendererMixin",
+    "client.renderers.RabbitRendererMixin",
+    "client.renderers.SheepRendererMixin",
+    "client.renderers.SquidRendererMixin"
+  ],
+  "mixins": [
+    "common.entities.AgeableMobMixin",
+    "common.entities.CatMixin",
+    "common.entities.ChickenMixin",
+    "common.entities.DolphinMixin",
+    "common.entities.MobMixin",
+    "common.entities.PigMixin",
+    "common.entities.RabbitMixin",
+    "common.entities.SquidMixin",
+    "common.entities.TurtleMixin",
+    "common.entities.WaterAnimalMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
