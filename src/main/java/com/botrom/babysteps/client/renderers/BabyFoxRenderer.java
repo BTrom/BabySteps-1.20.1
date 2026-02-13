@@ -2,6 +2,7 @@ package com.botrom.babysteps.client.renderers;
 
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.BabyFoxModel;
+import com.botrom.babysteps.utils.BabyConfig;
 import net.minecraft.client.model.FoxModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -26,14 +27,14 @@ public class BabyFoxRenderer {
     }
 
     public Optional<FoxModel<Fox>> bakeModels(Fox entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyFox) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();
     }
 
     public ResourceLocation getTexture(Fox entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyFox) {
             if (entity.getVariant().getId() == 1) {
                 if (entity.isSleeping()) {
                     return FOX_SNOW_SLEEP_BABY_TEXTURE;
@@ -52,7 +53,7 @@ public class BabyFoxRenderer {
     }
 
     public Optional<FoxModel<Fox>> getModel(Fox entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyFox) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();

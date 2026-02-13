@@ -1,6 +1,7 @@
 package com.botrom.babysteps.mixins.common.entities;
 
 import com.botrom.babysteps.BabySteps;
+import com.botrom.babysteps.utils.BabyConfig;
 import com.botrom.babysteps.utils.IAgeableMob;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -45,6 +46,7 @@ public abstract class MobMixin extends LivingEntity {
 
     @Unique
     private static boolean bs$canUseGoldenDandelion(final ItemStack itemInHand, final boolean isBaby, final int cooldown, final Mob mob) {
+        if (!BabyConfig.enableGoldenDandelion) return false;
         return (itemInHand.getItem() == BabySteps.BabyItems.GOLDEN_DANDELION.get() || itemInHand.getItem() == BabySteps.BabyBlocks.GOLDEN_DANDELION.get().asItem()) && isBaby && cooldown == 0 && !mob.getType().is(BabySteps.BabyTags.CANNOT_BE_AGE_LOCKED);
     }
 }

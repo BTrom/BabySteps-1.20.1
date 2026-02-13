@@ -1,6 +1,7 @@
 package com.botrom.babysteps.mixins.common.entities;
 
 import com.botrom.babysteps.BabySteps;
+import com.botrom.babysteps.utils.BabyConfig;
 import com.botrom.babysteps.utils.IAgeableMob;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -50,7 +51,7 @@ public abstract class AgeableMobMixin extends PathfinderMob implements IAgeableM
     @Override
     @Unique
     public boolean isAgeLocked() {
-        return this.entityData.get(AGE_LOCKED);
+        return this.entityData.get(AGE_LOCKED) && BabyConfig.enableGoldenDandelion;
     }
 
     @Override

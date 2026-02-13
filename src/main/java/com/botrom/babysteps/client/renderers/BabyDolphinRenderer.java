@@ -2,6 +2,7 @@ package com.botrom.babysteps.client.renderers;
 
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.BabyDolphinModel;
+import com.botrom.babysteps.utils.BabyConfig;
 import net.minecraft.client.model.DolphinModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -23,21 +24,21 @@ public class BabyDolphinRenderer {
     }
 
     public Optional<DolphinModel<Dolphin>> bakeModels(Dolphin entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyDolphin) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();
     }
 
     public ResourceLocation getTexture(Dolphin entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyDolphin) {
             return BABY_TEXTURE;
         }
         return null;
     }
 
     public Optional<DolphinModel<Dolphin>> getModel(Dolphin entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyDolphin) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();

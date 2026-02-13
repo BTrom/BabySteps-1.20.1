@@ -1,6 +1,7 @@
 package com.botrom.babysteps.mixins.common.entities;
 
 import com.botrom.babysteps.BabySteps;
+import com.botrom.babysteps.utils.BabyConfig;
 import com.botrom.babysteps.utils.IAgeableMob;
 import com.botrom.babysteps.utils.IAgeableWaterCreature;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -62,7 +63,7 @@ public abstract class WaterAnimalMixin extends PathfinderMob implements IAgeable
 
     @Override
     public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, MobSpawnType spawnReason, @Nullable SpawnGroupData groupData, @Nullable CompoundTag dataTag) {
-        if (this.getType().is(BabySteps.BabyTags.AGEABLE_WATER_CREATURE)) {
+        if (this.bs$isBabyConfigEnabled() && this.getType().is(BabySteps.BabyTags.AGEABLE_WATER_CREATURE)) {
             if (groupData == null) {
                 groupData = new AgeableMob.AgeableMobGroupData(true);
             }
@@ -92,7 +93,7 @@ public abstract class WaterAnimalMixin extends PathfinderMob implements IAgeable
     public void aiStep() {
         super.aiStep();
 
-        if (!this.getType().is(BabySteps.BabyTags.AGEABLE_WATER_CREATURE)) return;
+        if (!this.bs$isBabyConfigEnabled() || !this.getType().is(BabySteps.BabyTags.AGEABLE_WATER_CREATURE)) return;
 
         if (this.getAge() != 0) {
             this.inLove = 0;
@@ -423,5 +424,17 @@ public abstract class WaterAnimalMixin extends PathfinderMob implements IAgeable
         if (level.getGameRules().getBoolean(GameRules.RULE_DOMOBLOOT)) {
             level.addFreshEntity(new ExperienceOrb(level, this.getX(), this.getY(), this.getZ(), this.getRandom().nextInt(7) + 1));
         }
+    }
+
+    @Unique
+    private boolean bs$isBabyConfigEnabled() {
+        if (this.getType() == EntityType.DOLPHIN) {
+            return BabyConfig.enableBabyDolphin;
+        }
+        if (this.getType() == EntityType.SQUID) {
+            return BabyConfig.enableBabySquid;
+        }
+        // Fallback: If it's in the tag but not a specific vanilla mob (e.g. modded), allow it.
+        return false;
     }
 }

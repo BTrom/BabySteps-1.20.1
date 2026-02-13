@@ -2,6 +2,7 @@ package com.botrom.babysteps.client.renderers;
 
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.BabyTurtleModel;
+import com.botrom.babysteps.utils.BabyConfig;
 import net.minecraft.client.model.TurtleModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -23,21 +24,21 @@ public class BabyTurtleRenderer {
     }
 
     public Optional<TurtleModel<Turtle>> bakeModels(Turtle entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyTurtle) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();
     }
 
     public ResourceLocation getTexture(Turtle entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyTurtle) {
             return BABY_TEXTURE;
         }
         return null;
     }
 
     public Optional<TurtleModel<Turtle>> getModel(Turtle entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyTurtle) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();

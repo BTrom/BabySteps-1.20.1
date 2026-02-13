@@ -3,6 +3,7 @@ package com.botrom.babysteps.client.renderers;
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.BabyRabbitModel;
 import com.botrom.babysteps.client.models.RabbitModel;
+import com.botrom.babysteps.utils.BabyConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -51,25 +52,73 @@ public class RabbitRenderer {
     public ResourceLocation getTexture(Rabbit entity) {
         String name = ChatFormatting.stripFormatting(entity.getName().getString());
         if ("Toast".equals(name)) {
-            return entity.isBaby() ? RABBIT_TOAST_BABY : RABBIT_TOAST;
+            if (entity.isBaby() && BabyConfig.enableBabyRabbitModel) {
+                return RABBIT_TOAST_BABY;
+            } else if (BabyConfig.enableAdultRabbitModel){
+                return RABBIT_TOAST;
+            } else
+                return null;
         } else {
-            return switch (entity.getVariant().id()) {
-                case 1 -> entity.isBaby() ? RABBIT_WHITE_BABY : RABBIT_WHITE;
-                case 2 -> entity.isBaby() ? RABBIT_BLACK_BABY : RABBIT_BLACK;
-                case 3 -> entity.isBaby() ? RABBIT_WHITE_SPLOTCHED_BABY : RABBIT_WHITE_SPLOTCHED;
-                case 4 -> entity.isBaby() ? RABBIT_GOLD_BABY : RABBIT_GOLD;
-                case 5 -> entity.isBaby() ? RABBIT_SALT_BABY : RABBIT_SALT;
-                case 99 -> entity.isBaby() ? RABBIT_CAERBANNOG_BABY : RABBIT_CAERBANNOG;
-                default -> entity.isBaby() ? RABBIT_BROWN_BABY : RABBIT_BROWN;
-            };
+            switch (entity.getVariant().id()) {
+                case 1:
+                    if (entity.isBaby() && BabyConfig.enableBabyRabbitModel) {
+                        return RABBIT_WHITE_BABY;
+                    } else if (BabyConfig.enableAdultRabbitModel){
+                        return RABBIT_WHITE;
+                    } else
+                        return null;
+                case 2:
+                    if (entity.isBaby() && BabyConfig.enableBabyRabbitModel) {
+                        return RABBIT_BLACK_BABY;
+                    } else if (BabyConfig.enableAdultRabbitModel){
+                        return RABBIT_BLACK;
+                    } else
+                        return null;
+                case 3:
+                    if (entity.isBaby() && BabyConfig.enableBabyRabbitModel) {
+                        return RABBIT_WHITE_SPLOTCHED_BABY;
+                    } else if (BabyConfig.enableAdultRabbitModel){
+                        return RABBIT_WHITE_SPLOTCHED;
+                    } else
+                        return null;
+                case 4:
+                    if (entity.isBaby() && BabyConfig.enableBabyRabbitModel) {
+                        return RABBIT_GOLD_BABY;
+                    } else if (BabyConfig.enableAdultRabbitModel){
+                        return RABBIT_GOLD;
+                    } else
+                        return null;
+                case 5:
+                    if (entity.isBaby() && BabyConfig.enableBabyRabbitModel) {
+                        return RABBIT_SALT_BABY;
+                    } else if (BabyConfig.enableAdultRabbitModel){
+                        return RABBIT_SALT;
+                    } else
+                        return null;
+                case 99:
+                    if (entity.isBaby() && BabyConfig.enableBabyRabbitModel) {
+                        return RABBIT_CAERBANNOG_BABY;
+                    } else if (BabyConfig.enableAdultRabbitModel){
+                        return RABBIT_CAERBANNOG;
+                    } else
+                        return null;
+                default:
+                    if (entity.isBaby() && BabyConfig.enableBabyRabbitModel) {
+                        return RABBIT_BROWN_BABY;
+                    } else if (BabyConfig.enableAdultRabbitModel){
+                        return RABBIT_BROWN;
+                    } else
+                        return null;
+            }
         }
     }
 
     public Optional<RabbitModel<Rabbit>> getModel(Rabbit entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyRabbitModel) {
             return Optional.of(this.babyModel);
-        } else {
+        } else if (BabyConfig.enableAdultRabbitModel) {
             return Optional.of(this.adultModel);
-        }
+        } else
+            return Optional.empty();
     }
 }

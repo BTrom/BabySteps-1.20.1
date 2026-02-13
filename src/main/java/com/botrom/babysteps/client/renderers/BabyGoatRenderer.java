@@ -2,6 +2,7 @@ package com.botrom.babysteps.client.renderers;
 
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.BabyGoatModel;
+import com.botrom.babysteps.utils.BabyConfig;
 import net.minecraft.client.model.GoatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -23,21 +24,21 @@ public class BabyGoatRenderer {
     }
 
     public Optional<GoatModel<Goat>> bakeModels(Goat entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyGoat) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();
     }
 
     public ResourceLocation getTexture(Goat entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyGoat) {
             return BABY_TEXTURE;
         }
         return null;
     }
 
     public Optional<GoatModel<Goat>> getModel(Goat entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyGoat) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();

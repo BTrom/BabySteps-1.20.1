@@ -35,7 +35,7 @@ import org.slf4j.Logger;
 @Mod(BabySteps.MOD_ID)
 public class BabySteps {
     public static final String MOD_ID = "babysteps";
-    private static final Logger LOGGER = LogUtils.getLogger();
+//    private static final Logger LOGGER = LogUtils.getLogger();
 
     public BabySteps(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
@@ -49,7 +49,8 @@ public class BabySteps {
 
         modEventBus.addListener(this::creativeTabsInjection);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BabyConfig.SPEC, BabySteps.MOD_ID + ".toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, BabyConfig.CLIENT_SPEC, BabySteps.MOD_ID + "-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BabyConfig.COMMON_SPEC, BabySteps.MOD_ID + "-common.toml");
     }
 
     private void clientSetup(final FMLCommonSetupEvent event) {

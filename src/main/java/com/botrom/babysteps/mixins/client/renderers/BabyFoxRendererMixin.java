@@ -2,6 +2,7 @@ package com.botrom.babysteps.mixins.client.renderers;
 
 import com.botrom.babysteps.client.renderers.BabyFoxRenderer;
 import com.botrom.babysteps.client.renderers.layers.BabyFoxHeldItemLayer;
+import com.botrom.babysteps.utils.BabyConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.FoxModel;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -10,6 +11,7 @@ import net.minecraft.client.renderer.entity.FoxRenderer;
 import net.minecraft.client.renderer.entity.layers.FoxHeldItemLayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.Fox;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -36,8 +38,10 @@ public abstract class BabyFoxRendererMixin extends MobRendererMixin<Fox, FoxMode
 
     @Inject(method = "<init>", at = @At("RETURN"))
     private void bs$initLayers(EntityRendererProvider.Context context, CallbackInfo ci) {
-        this.layers.removeIf(layer -> layer instanceof FoxHeldItemLayer);
-        this.addLayer(new BabyFoxHeldItemLayer((FoxRenderer)(Object)this, context.getItemInHandRenderer()));
+        if (BabyConfig.enableBabyFox) {
+            this.layers.removeIf(layer -> layer instanceof FoxHeldItemLayer);
+            this.addLayer(new BabyFoxHeldItemLayer((FoxRenderer) (Object) this, context.getItemInHandRenderer()));
+        }
     }
 
     @Inject(
@@ -53,7 +57,7 @@ public abstract class BabyFoxRendererMixin extends MobRendererMixin<Fox, FoxMode
     }
 
     @Override
-    public void render(Fox entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
+    public void render(@NotNull Fox entity, float entityYaw, float partialTicks, @NotNull PoseStack poseStack, @NotNull MultiBufferSource buffer, int packedLight) {
         this.model = this.bs$getBabyFoxRenderer().getModel(entity).orElseGet(() -> this.defaultModel);
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
     }

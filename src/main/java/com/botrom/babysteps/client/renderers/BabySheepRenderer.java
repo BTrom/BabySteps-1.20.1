@@ -2,6 +2,7 @@ package com.botrom.babysteps.client.renderers;
 
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.BabySheepModel;
+import com.botrom.babysteps.utils.BabyConfig;
 import net.minecraft.client.model.SheepModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -24,21 +25,21 @@ public class BabySheepRenderer {
     }
 
     public Optional<SheepModel<Sheep>> bakeModels(Sheep entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabySheep) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();
     }
 
     public ResourceLocation getTexture(Sheep entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabySheep) {
             return BABY_TEXTURE;
         }
         return null;
     }
 
     public Optional<SheepModel<Sheep>> getModel(Sheep entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabySheep) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();

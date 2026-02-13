@@ -2,6 +2,7 @@ package com.botrom.babysteps.client.renderers;
 
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.BabyCatModel;
+import com.botrom.babysteps.utils.BabyConfig;
 import net.minecraft.client.model.CatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -34,14 +35,14 @@ public class BabyCatRenderer {
     }
 
     public Optional<CatModel<Cat>> bakeModels(Cat entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyCat) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();
     }
 
     public ResourceLocation getTexture(Cat entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyCat) {
             ResourceLocation vanillaTexture = entity.getVariant().texture();
             String path = vanillaTexture.getPath();
 
@@ -62,7 +63,7 @@ public class BabyCatRenderer {
     }
 
     public Optional<CatModel<Cat>> getModel(Cat entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyCat) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();

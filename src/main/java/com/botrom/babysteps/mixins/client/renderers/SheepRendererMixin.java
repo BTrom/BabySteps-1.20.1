@@ -2,6 +2,7 @@ package com.botrom.babysteps.mixins.client.renderers;
 
 import com.botrom.babysteps.client.renderers.BabySheepRenderer;
 import com.botrom.babysteps.client.renderers.layers.BabySheepWoolLayer;
+import com.botrom.babysteps.utils.BabyConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.SheepModel;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -10,6 +11,7 @@ import net.minecraft.client.renderer.entity.SheepRenderer;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.Sheep;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,7 +32,9 @@ public abstract class SheepRendererMixin extends MobRendererMixin<Sheep, SheepMo
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void bs$onInit(EntityRendererProvider.Context context, CallbackInfo ci) {
-        this.addLayer(new BabySheepWoolLayer(this, context.getModelSet()));
+        if (BabyConfig.enableBabySheep) {
+            this.addLayer(new BabySheepWoolLayer(this, context.getModelSet()));
+        }
     }
 
     @Unique
@@ -54,8 +58,8 @@ public abstract class SheepRendererMixin extends MobRendererMixin<Sheep, SheepMo
     }
 
     @Override
-    public void render(Sheep entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
-        if (entity.isBaby()) {
+    public void render(Sheep entity, float entityYaw, float partialTicks, @NotNull PoseStack poseStack, @NotNull MultiBufferSource buffer, int packedLight) {
+        if (entity.isBaby() && BabyConfig.enableBabySheep) {
             this.model = this.bs$babySheepRenderer().getModel(entity).orElse(this.defaultModel);
 
             List<RenderLayer<Sheep, SheepModel<Sheep>>> originalLayers = new ArrayList<>(this.layers);

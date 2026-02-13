@@ -2,14 +2,13 @@ package com.botrom.babysteps.client.renderers;
 
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.BabyChickenModel;
-import com.google.common.collect.Maps;
+import com.botrom.babysteps.utils.BabyConfig;
 import net.minecraft.client.model.ChickenModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.Chicken;
 
-import java.util.Map;
 import java.util.Optional;
 
 public class BabyChickenRenderer {
@@ -25,21 +24,21 @@ public class BabyChickenRenderer {
     }
 
     public Optional<ChickenModel<Chicken>> bakeModels(Chicken entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyChicken) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();
     }
 
     public ResourceLocation getTexture(Chicken entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyChicken) {
             return VANILLA_BABY_TEXTURE;
         }
         return null;
     }
 
     public Optional<ChickenModel<Chicken>> getModel(Chicken entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyChicken) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();

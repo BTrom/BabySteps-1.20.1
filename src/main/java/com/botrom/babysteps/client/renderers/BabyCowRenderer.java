@@ -2,13 +2,13 @@ package com.botrom.babysteps.client.renderers;
 
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.BabyCowModel;
+import com.botrom.babysteps.utils.BabyConfig;
 import net.minecraft.client.model.CowModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.animal.Cow;
 
-import java.util.Map;
 import java.util.Optional;
 
 public class BabyCowRenderer {
@@ -23,21 +23,21 @@ public class BabyCowRenderer {
     }
 
     public Optional<CowModel<Cow>> bakeModels(Cow entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyCow) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();
     }
 
     public ResourceLocation getTexture(Cow entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyCow) {
             return VANILLA_BABY_TEXTURE;
         }
         return null;
     }
 
     public Optional<CowModel<Cow>> getModel(Cow entity) {
-        if (entity.isBaby()) {
+        if (entity.isBaby() && BabyConfig.enableBabyCow) {
             return Optional.of(this.babyModel);
         }
         return Optional.empty();
