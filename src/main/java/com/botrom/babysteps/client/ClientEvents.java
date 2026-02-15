@@ -3,8 +3,11 @@ package com.botrom.babysteps.client;
 import com.botrom.babysteps.BabySteps;
 import com.botrom.babysteps.client.models.*;
 import com.botrom.babysteps.client.renderers.*;
+import net.minecraft.client.renderer.texture.TextureAtlas;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -40,5 +43,9 @@ public class ClientEvents {
         e.registerLayerDefinition(SquidRenderer.BABY_SQUID, BabySquidModel::createBodyLayer);
         e.registerLayerDefinition(BabyTurtleRenderer.BABY_TURTLE, BabyTurtleModel::createBodyLayer);
         e.registerLayerDefinition(BabyWolfRenderer.BABY_WOLF, BabyWolfModel::createBodyLayer);
+        e.registerLayerDefinition(NautilusRenderer.LAYER_MAIN, NautilusModel::createBodyLayer);
+        e.registerLayerDefinition(NautilusRenderer.LAYER_BABY, NautilusModel::createBabyBodyLayer);
+        e.registerLayerDefinition(NautilusRenderer.LAYER_SADDLE, NautilusModel::createSaddleLayer);
+        e.registerLayerDefinition(NautilusRenderer.LAYER_ARMOR, NautilusModel::createArmorLayer);
     }
 }

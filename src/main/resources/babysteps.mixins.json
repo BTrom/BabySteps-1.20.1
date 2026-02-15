@@ -15,6 +15,7 @@
     "client.renderers.BabyGoatRendererMixin",
     "client.renderers.BabyHorseRendererMixin",
     "client.renderers.BabyLlamaRendererMixin",
+    "client.renderers.BabyMushroomCowRendererMixin",
     "client.renderers.BabyOcelotRendererMixin",
     "client.renderers.BabyPolarBearRendererMixin",
     "client.renderers.BabyTurtleRendererMixin",

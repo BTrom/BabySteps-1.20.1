@@ -315,6 +315,465 @@
     ],
     "subtitle": "subtitles.block.generic.footsteps"
   },
+  "entity/nautilus_ambient": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.ambient",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_ambient8",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient7",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient6",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient5",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_ambient_land": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.ambient_land",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_ambient_land7",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient_land6",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient_land5",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient_land4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient_land3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient_land2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_ambient_land1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_dash": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.dash",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_dash4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_dash_land": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.dash",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_dash_land4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash_land3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash_land2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash_land1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_dash_ready": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.dash",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_dash_ready1",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash_ready2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash_ready3",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_dash_ready_land": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.dash",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_dash_ready_land1",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash_ready_land2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash_ready_land3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_dash_ready_land4",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_death": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.death",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_death",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_death_land": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.death",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_death_land",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_eat": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.death",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_eat1",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_eat2",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_hurt": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.hurt",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_hurt4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_hurt3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_hurt2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_hurt1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_hurt_land": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.hurt",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_hurt_land4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_hurt_land3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_hurt_land2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_hurt_land1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_swim": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.hurt",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_swim1",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim5",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim6",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim7",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim8",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim9",
+        "stream": false
+      }
+    ]
+  },
+  "entity/nautilus_riding": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.hurt",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_ride",
+        "stream": false
+      }
+    ]
+  },
+  "entity/baby_nautilus_ambient": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.ambient",
+    "sounds": [
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient6",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient5",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/baby_nautilus_ambient_land": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.ambient_land",
+    "sounds": [
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient_land4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient_land3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient_land2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_ambient_land1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/baby_nautilus_death": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.death",
+    "sounds": [
+      {
+        "name": "babysteps:entity/baby_nautilus_death",
+        "stream": false
+      }
+    ]
+  },
+  "entity/baby_nautilus_death_land": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.death",
+    "sounds": [
+      {
+        "name": "babysteps:entity/baby_nautilus_death_land",
+        "stream": false
+      }
+    ]
+  },
+  "entity/baby_nautilus_eat": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.death",
+    "sounds": [
+      {
+        "name": "babysteps:entity/baby_nautilus_eat1",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_eat2",
+        "stream": false
+      }
+    ]
+  },
+  "entity/baby_nautilus_hurt": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.hurt",
+    "sounds": [
+      {
+        "name": "babysteps:entity/baby_nautilus_hurt4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_hurt3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_hurt2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_hurt1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/baby_nautilus_hurt_land": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.hurt",
+    "sounds": [
+      {
+        "name": "babysteps:entity/baby_nautilus_hurt_land4",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_hurt_land3",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_hurt_land2",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/baby_nautilus_hurt_land1",
+        "stream": false
+      }
+    ]
+  },
+  "entity/baby_nautilus_swim": {
+    "subtitle": "babysteps.sound.subtitle.nautilus.hurt",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_swim1",
+        "pitch": 0.75,
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim2",
+        "pitch": 0.75,
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim3",
+        "pitch": 0.75,
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim4",
+        "pitch": 0.75,
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim5",
+        "pitch": 0.75,
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim6",
+        "pitch": 0.75,
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim7",
+        "pitch": 0.75,
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim8",
+        "pitch": 0.75,
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_swim9",
+        "pitch": 0.75,
+        "stream": false
+      }
+    ]
+  },
+  "item/nautilus_saddle_equip": {
+    "subtitle": "babysteps.sound.subtitle.nautilus_saddle_equip",
+    "sounds": [
+      {
+        "name": "babysteps:entity/nautilus_saddle_equip",
+        "stream": false
+      },
+      {
+        "name": "babysteps:entity/nautilus_saddle_underwater_equip",
+        "stream": false
+      }
+    ]
+  },
   "entity/baby_pig_ambient": {
     "sounds": [
       {

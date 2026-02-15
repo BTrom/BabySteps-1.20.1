@@ -1,7 +1,17 @@
 {
   "item.babysteps.golden_dandelion": "Golden Dandelion",
+  "item.babysteps.nautilus_spawn_egg": "Nautilus Spawn Egg",
+  "item.minecraft.zombie_nautilus_spawn_egg": "Zombie Nautilus Spawn Egg",
+  "item.minecraft.copper_nautilus_armor": "Copper Nautilus Armor",
+  "item.minecraft.iron_nautilus_armor": "Iron Nautilus Armor",
+  "item.minecraft.golden_nautilus_armor": "Golden Nautilus Armor",
+  "item.minecraft.diamond_nautilus_armor": "Diamond Nautilus Armor",
+  "item.minecraft.netherite_nautilus_armor": "Netherite Nautilus Armor",
   
   "block.babysteps.golden_dandelion": "Golden Dandelion",
+  
+  "entity.babysteps.nautilus": "Nautilus",
+  "entity.babysteps.zombie_nautilus": "Zombie Nautilus",
 
   "babysteps.sound.subtitle.baby_cat.ambient": "Kitten meows",
   "babysteps.sound.subtitle.baby_cat.beg_for_food": "Kitten begs",
@@ -19,6 +29,30 @@
   "babysteps.sound.subtitle.baby_horse.death": "Foal dies",
   "babysteps.sound.subtitle.baby_horse.eat": "Foal eats",
   "babysteps.sound.subtitle.baby_horse.hurt": "Foal hurts",
+  "babysteps.sound.subtitle.baby_nautilus.ambient": "Baby Nautilus chitters",
+  "babysteps.sound.subtitle.baby_nautilus.ambient_land": "Baby Nautilus chitters",
+  "babysteps.sound.subtitle.baby_nautilus.death": "Baby Nautilus dies",
+  "babysteps.sound.subtitle.baby_nautilus.death_land": "Baby Nautilus dies",
+  "babysteps.sound.subtitle.baby_nautilus.eat": "Baby Nautilus eats",
+  "babysteps.sound.subtitle.baby_nautilus.hurt": "Baby Nautilus hurts",
+  "babysteps.sound.subtitle.baby_nautilus.hurt_land": "Baby Nautilus hurts",
+  "babysteps.sound.subtitle.baby_nautilus.swim": "Baby Nautilus swims",
+  "babysteps.sound.subtitle.nautilus.ambient": "Nautilus clacks",
+  "babysteps.sound.subtitle.nautilus.ambient_land": "Nautilus clacks",
+  "babysteps.sound.subtitle.nautilus.dash": "Nautilus jets",
+  "babysteps.sound.subtitle.nautilus.dash_land": "Nautilus jets",
+  "babysteps.sound.subtitle.nautilus.dash_ready": "Nautilus recovers",
+  "babysteps.sound.subtitle.nautilus.dash_ready_land": "Nautilus recovers",
+  "babysteps.sound.subtitle.nautilus.death": "Nautilus dies",
+  "babysteps.sound.subtitle.nautilus.death_land": "Nautilus dies",
+  "babysteps.sound.subtitle.nautilus.eat": "Nautilus eats",
+  "babysteps.sound.subtitle.nautilus.hurt": "Nautilus hurts",
+  "babysteps.sound.subtitle.nautilus.hurt_land": "Nautilus hurts",
+  "babysteps.sound.subtitle.nautilus.swim": "Nautilus swims",
+  "babysteps.sound.subtitle.equip_nautilus": "Nautilus Armor equips",
+  "babysteps.sound.subtitle.unequip_nautilus": "Nautilus Armor unequips",
+  "babysteps.sound.subtitle.nautilus_saddle_equip": "Saddle equips",
+  "babysteps.sound.subtitle.nautilus_saddle_underwater_equip": "Saddle equips",
   "babysteps.sound.subtitle.baby_pig.ambient": "Baby Pig oinks",
   "babysteps.sound.subtitle.baby_pig.death": "Baby Pig dies",
   "babysteps.sound.subtitle.baby_pig.hurt": "Baby Pig hurts",
@@ -32,5 +66,7 @@
   "babysteps.sound.subtitle.turtle.hurt_baby": "Baby Turtle hurts",
   "babysteps.sound.subtitle.turtle.shamble_baby": "Baby Turtle shambles",
   "babysteps.sound.subtitle.golden_dandelion.use": "Golden Dandelion starts aging",
-  "babysteps.sound.subtitle.golden_dandelion.unuse": "Golden Dandelion halts aging"
+  "babysteps.sound.subtitle.golden_dandelion.unuse": "Golden Dandelion halts aging",
+  
+  "effect.babysteps.breath_of_the_nautilus": "Breath of the Nautilus"
 }

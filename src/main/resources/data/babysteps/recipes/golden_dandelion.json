@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:gold_nugget",
-    "I": "minecraft:dandelion"
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "I": {
+      "item": "minecraft:dandelion"
+    }
   },
   "pattern": [
     "###",
@@ -11,6 +15,6 @@
     "###"
   ],
   "result": {
-    "id": "babysteps:golden_dandelion"
+    "item": "babysteps:golden_dandelion"
   }
 }

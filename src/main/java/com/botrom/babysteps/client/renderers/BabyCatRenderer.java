@@ -22,6 +22,7 @@ public class BabyCatRenderer {
     private static final ResourceLocation CAT_ALL_BLACK_BABY_TEXTURE = new ResourceLocation(BabySteps.MOD_ID, "textures/entity/cat/cat_all_black_baby.png");
     private static final ResourceLocation CAT_BLACK_BABY_TEXTURE = new ResourceLocation(BabySteps.MOD_ID, "textures/entity/cat/cat_black_baby.png");
     private static final ResourceLocation CAT_BRITISH_SHORTHAIR_BABY_TEXTURE = new ResourceLocation(BabySteps.MOD_ID, "textures/entity/cat/cat_british_shorthair_baby.png");
+    private static final ResourceLocation CAT_CALICO_BABY_TEXTURE = new ResourceLocation(BabySteps.MOD_ID, "textures/entity/cat/cat_calico_baby.png");
     private static final ResourceLocation CAT_JELLIE_BABY_TEXTURE = new ResourceLocation(BabySteps.MOD_ID, "textures/entity/cat/cat_jellie_baby.png");
     private static final ResourceLocation CAT_PERSIAN_BABY_TEXTURE = new ResourceLocation(BabySteps.MOD_ID, "textures/entity/cat/cat_persian_baby.png");
     private static final ResourceLocation CAT_RAGDOLL_BABY_TEXTURE = new ResourceLocation(BabySteps.MOD_ID, "textures/entity/cat/cat_ragdoll_baby.png");
@@ -62,6 +63,7 @@ public class BabyCatRenderer {
             if (path.endsWith("all_black.png")) return CAT_ALL_BLACK_BABY_TEXTURE;
             if (path.endsWith("black.png") && !path.endsWith("all_black.png")) return CAT_BLACK_BABY_TEXTURE;
             if (path.endsWith("british_shorthair.png")) return CAT_BRITISH_SHORTHAIR_BABY_TEXTURE;
+            if (path.endsWith("calico.png")) return CAT_CALICO_BABY_TEXTURE;
             if (path.endsWith("jellie.png")) return CAT_JELLIE_BABY_TEXTURE;
             if (path.endsWith("persian.png")) return CAT_PERSIAN_BABY_TEXTURE;
             if (path.endsWith("ragdoll.png")) return CAT_RAGDOLL_BABY_TEXTURE;
