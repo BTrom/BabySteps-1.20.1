@@ -39,10 +39,9 @@ public abstract class BabyCatRendererMixin extends MobRendererMixin<Cat, CatMode
     // INJECT INTO CONSTRUCTOR to swap layers
     @Inject(method = "<init>", at = @At("RETURN"))
     private void bs$initLayers(EntityRendererProvider.Context context, CallbackInfo ci) {
-        if (BabyConfig.enableBabyCat) {
-            this.layers.removeIf(layer -> layer instanceof CatCollarLayer);
-            this.addLayer(new BabyCatCollarLayer((CatRenderer)(Object)this, this.context.getModelSet()));
-        }
+        this.layers.removeIf(layer -> layer instanceof CatCollarLayer);
+        this.addLayer(new BabyCatCollarLayer((CatRenderer)(Object)this, this.context.getModelSet()));
+
     }
 
     @Inject(

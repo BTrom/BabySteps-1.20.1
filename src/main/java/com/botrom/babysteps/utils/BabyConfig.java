@@ -11,23 +11,35 @@ import org.apache.commons.lang3.tuple.Pair;
 @Mod.EventBusSubscriber(modid = BabySteps.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BabyConfig {
 
+    public static boolean enableBabyAxolotl;
     public static boolean enableBabyBee;
+    public static boolean enableBabyCamel;
     public static boolean enableBabyCat;
     public static boolean enableBabyChicken;
     public static boolean enableBabyCow;
+    public static boolean enableBabyDonkey;
     public static boolean enableBabyFox;
     public static boolean enableBabyGoat;
+    public static boolean enableBabyHorse;
+    public static boolean enableBabyLlama;
+    public static boolean enableBabyMule;
+    public static boolean enableBabyOcelot;
     public static boolean enableBabyPig;
+    public static boolean enableBabyPolarBear;
     public static boolean enableAdultRabbitModel;
     public static boolean enableBabyRabbitModel;
     public static boolean enableBabySheep;
+    public static boolean enableBabySkeletonHorse;
     public static boolean enableBabyTurtle;
+    public static boolean enableBabyWolf;
+    public static boolean enableBabyZombieHorse;
 
     public static boolean enableAdultRabbitChanges;
     public static boolean enableBabyRabbitChanges;
     public static boolean enableBabyDolphin;
     public static boolean enableBabySquid;
     public static boolean enableGoldenDandelion;
+    public static boolean enableNautilusSpawning;
 
     public static final ClientConfig CLIENT;
     public static final ForgeConfigSpec CLIENT_SPEC;
@@ -46,24 +58,43 @@ public class BabyConfig {
     }
 
     public static class ClientConfig {
+        public final ForgeConfigSpec.BooleanValue enableBabyAxolotl;
         public final ForgeConfigSpec.BooleanValue enableBabyBee;
+        public final ForgeConfigSpec.BooleanValue enableBabyCamel;
         public final ForgeConfigSpec.BooleanValue enableBabyCat;
         public final ForgeConfigSpec.BooleanValue enableBabyChicken;
         public final ForgeConfigSpec.BooleanValue enableBabyCow;
+        public final ForgeConfigSpec.BooleanValue enableBabyDonkey;
         public final ForgeConfigSpec.BooleanValue enableBabyFox;
         public final ForgeConfigSpec.BooleanValue enableBabyGoat;
+        public final ForgeConfigSpec.BooleanValue enableBabyHorse;
+        public final ForgeConfigSpec.BooleanValue enableBabyLlama;
+        public final ForgeConfigSpec.BooleanValue enableBabyMule;
+        public final ForgeConfigSpec.BooleanValue enableBabyOcelot;
         public final ForgeConfigSpec.BooleanValue enableBabyPig;
+        public final ForgeConfigSpec.BooleanValue enableBabyPolarBear;
         public final ForgeConfigSpec.BooleanValue enableAdultRabbitModel;
         public final ForgeConfigSpec.BooleanValue enableBabyRabbitModel;
         public final ForgeConfigSpec.BooleanValue enableBabySheep;
+        public final ForgeConfigSpec.BooleanValue enableBabySkeletonHorse;
         public final ForgeConfigSpec.BooleanValue enableBabyTurtle;
+        public final ForgeConfigSpec.BooleanValue enableBabyWolf;
+        public final ForgeConfigSpec.BooleanValue enableBabyZombieHorse;
 
         public ClientConfig(ForgeConfigSpec.Builder builder) {
             builder.push("rendering");
 
+            enableBabyAxolotl = builder
+                    .comment("Whether to use the new baby model for axolotls.")
+                    .define("enableBabyAxolotl", true);
+
             enableBabyBee = builder
                     .comment("Whether to use the new baby model for bees.")
                     .define("enableBabyBee", true);
+
+            enableBabyCamel = builder
+                    .comment("Whether to use the new baby model for camels.")
+                    .define("enableBabyCamel", true);
 
             enableBabyCat = builder
                     .comment("Whether to use the new baby model for cats.")
@@ -77,6 +108,10 @@ public class BabyConfig {
                     .comment("Whether to use the new baby model for cows.")
                     .define("enableBabyCow", true);
 
+            enableBabyDonkey = builder
+                    .comment("Whether to use the new baby model for donkeys.")
+                    .define("enableBabyDonkey", true);
+
             enableBabyFox = builder
                     .comment("Whether to use the new baby model for foxes.")
                     .define("enableBabyFox", true);
@@ -85,9 +120,29 @@ public class BabyConfig {
                     .comment("Whether to use the new baby model for goats.")
                     .define("enableBabyGoat", true);
 
+            enableBabyHorse = builder
+                    .comment("Whether to use the new baby model for horses.")
+                    .define("enableBabyHorse", true);
+
+            enableBabyLlama = builder
+                    .comment("Whether to use the new baby model for llamas.")
+                    .define("enableBabyLlama", true);
+
+            enableBabyMule = builder
+                    .comment("Whether to use the new baby model for mules.")
+                    .define("enableBabyMule", true);
+
+            enableBabyOcelot = builder
+                    .comment("Whether to use the new baby model for ocelots.")
+                    .define("enableBabyOcelot", true);
+
             enableBabyPig = builder
                     .comment("Whether to use the new baby model for pigs.")
                     .define("enableBabyPig", true);
+
+            enableBabyPolarBear = builder
+                    .comment("Whether to use the new baby model for polar bears.")
+                    .define("enableBabyPolarBear", true);
 
             enableAdultRabbitModel = builder
                     .comment("Whether to use the new model for adult rabbits.\nWarning: It will look weird if the respective server side config is disabled!")
@@ -101,9 +156,21 @@ public class BabyConfig {
                     .comment("Whether to use the new baby model for sheep.")
                     .define("enableBabySheep", true);
 
+            enableBabySkeletonHorse = builder
+                    .comment("Whether to use the new baby model for skeleton horses.")
+                    .define("enableBabySkeletonHorse", true);
+
             enableBabyTurtle = builder
                     .comment("Whether to use the new baby model for turtles.")
                     .define("enableBabyTurtle", true);
+
+            enableBabyWolf = builder
+                    .comment("Whether to use the new baby model for wolves.")
+                    .define("enableBabyWolf", true);
+
+            enableBabyZombieHorse = builder
+                    .comment("Whether to use the new baby model for zombie horses.")
+                    .define("enableBabyZombieHorse", true);
 
             builder.pop();
         }
@@ -155,17 +222,28 @@ public class BabyConfig {
 
     private static void updateConfig(final ModConfig config) {
         if (config.getSpec() == CLIENT_SPEC) {
+            enableBabyAxolotl = CLIENT.enableBabyAxolotl.get();
             enableBabyBee = CLIENT.enableBabyBee.get();
+            enableBabyCamel = CLIENT.enableBabyCamel.get();
             enableBabyCat = CLIENT.enableBabyCat.get();
             enableBabyChicken = CLIENT.enableBabyChicken.get();
             enableBabyCow = CLIENT.enableBabyCow.get();
+            enableBabyDonkey = CLIENT.enableBabyDonkey.get();
             enableBabyFox = CLIENT.enableBabyFox.get();
             enableBabyGoat = CLIENT.enableBabyGoat.get();
+            enableBabyHorse = CLIENT.enableBabyHorse.get();
+            enableBabyLlama = CLIENT.enableBabyLlama.get();
+            enableBabyMule = CLIENT.enableBabyMule.get();
+            enableBabyOcelot = CLIENT.enableBabyOcelot.get();
             enableBabyPig = CLIENT.enableBabyPig.get();
+            enableBabyPolarBear = CLIENT.enableBabyPolarBear.get();
             enableAdultRabbitModel = CLIENT.enableAdultRabbitModel.get();
             enableBabyRabbitModel = CLIENT.enableBabyRabbitModel.get();
             enableBabySheep = CLIENT.enableBabySheep.get();
+            enableBabySkeletonHorse = CLIENT.enableBabySkeletonHorse.get();
             enableBabyTurtle = CLIENT.enableBabyTurtle.get();
+            enableBabyWolf = CLIENT.enableBabyWolf.get();
+            enableBabyZombieHorse = CLIENT.enableBabyZombieHorse.get();
         }
 
         if (config.getSpec() == COMMON_SPEC) {

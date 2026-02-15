@@ -5,12 +5,21 @@
   "refmap": "babysteps.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "client.renderers.BabyAxolotlRendererMixin",
     "client.renderers.BabyBeeRendererMixin",
+    "client.renderers.BabyCamelRendererMixin",
     "client.renderers.BabyCatRendererMixin",
+    "client.renderers.BabyChestedHorseRendererMixin",
     "client.renderers.BabyDolphinRendererMixin",
     "client.renderers.BabyFoxRendererMixin",
     "client.renderers.BabyGoatRendererMixin",
+    "client.renderers.BabyHorseRendererMixin",
+    "client.renderers.BabyLlamaRendererMixin",
+    "client.renderers.BabyOcelotRendererMixin",
+    "client.renderers.BabyPolarBearRendererMixin",
     "client.renderers.BabyTurtleRendererMixin",
+    "client.renderers.BabyUndeadHorseRendererMixin",
+    "client.renderers.BabyWolfRendererMixin",
     "client.renderers.ChickenRendererMixin",
     "client.renderers.CowRendererMixin",
     "client.renderers.GlowSquidRendererMixin",
@@ -21,16 +30,20 @@
     "client.renderers.SquidRendererMixin"
   ],
   "mixins": [
+    "common.entities.AbstractChestedHorseMixin",
     "common.entities.AgeableMobMixin",
+    "common.entities.AxolotlMixin",
     "common.entities.CatMixin",
     "common.entities.ChickenMixin",
     "common.entities.DolphinMixin",
+    "common.entities.HorseMixin",
     "common.entities.MobMixin",
     "common.entities.PigMixin",
     "common.entities.RabbitMixin",
     "common.entities.SquidMixin",
     "common.entities.TurtleMixin",
-    "common.entities.WaterAnimalMixin"
+    "common.entities.WaterAnimalMixin",
+    "common.entities.WolfMixin"
   ],
   "injectors": {
     "defaultRequire": 1

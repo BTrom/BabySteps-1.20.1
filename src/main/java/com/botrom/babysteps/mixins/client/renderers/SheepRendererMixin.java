@@ -32,9 +32,7 @@ public abstract class SheepRendererMixin extends MobRendererMixin<Sheep, SheepMo
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void bs$onInit(EntityRendererProvider.Context context, CallbackInfo ci) {
-        if (BabyConfig.enableBabySheep) {
-            this.addLayer(new BabySheepWoolLayer(this, context.getModelSet()));
-        }
+        this.addLayer(new BabySheepWoolLayer(this, context.getModelSet()));
     }
 
     @Unique

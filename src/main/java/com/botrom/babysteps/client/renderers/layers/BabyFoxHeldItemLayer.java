@@ -1,5 +1,6 @@
 package com.botrom.babysteps.client.renderers.layers;
 
+import com.botrom.babysteps.utils.BabyConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.minecraft.client.model.FoxModel;
@@ -31,7 +32,10 @@ public class BabyFoxHeldItemLayer extends RenderLayer<Fox, FoxModel<Fox>> {
 
         if (isBaby) {
             poseStack.scale(0.75F, 0.75F, 0.75F);
-            poseStack.translate(-0.052F, 0.0F, -0.1F); // This is the offset to place it right where the mouth is, but it's a bit wonky so if probably doesn't fit perfectly
+            if (BabyConfig.enableBabyFox)
+                poseStack.translate(-0.052F, 0.0F, -0.1F);
+            else
+                poseStack.translate(0.0F, 0.5F, 0.209375F);
         }
 
         if (isBaby) {

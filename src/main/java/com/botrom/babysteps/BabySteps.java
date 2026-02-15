@@ -29,13 +29,14 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 
 @SuppressWarnings("deprecation")
 @Mod(BabySteps.MOD_ID)
 public class BabySteps {
     public static final String MOD_ID = "babysteps";
-//    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public BabySteps(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
@@ -76,9 +77,7 @@ public class BabySteps {
 
     public static class BabySounds {
         public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, BabySteps.MOD_ID);
-        public static final RegistryObject<SoundEvent> CHICKEN_AMBIENT_BABY = createSoundEvent("entity/chicken_baby_ambient");
-        public static final RegistryObject<SoundEvent> CHICKEN_HURT_BABY = createSoundEvent("entity/chicken_baby_hurt");
-        public static final RegistryObject<SoundEvent> CHICKEN_DEATH_BABY = createSoundEvent("entity/chicken_baby_death");
+        // Cat
         public static final RegistryObject<SoundEvent> CAT_PURR_BABY = createSoundEvent("entity/baby_cat_purr");
         public static final RegistryObject<SoundEvent> CAT_PURREOW_BABY = createSoundEvent("entity/baby_cat_purreow");
         public static final RegistryObject<SoundEvent> CAT_AMBIENT_BABY = createSoundEvent("entity/baby_cat_ambient");
@@ -88,13 +87,37 @@ public class BabySteps {
         public static final RegistryObject<SoundEvent> CAT_DEATH_BABY = createSoundEvent("entity/baby_cat_death");
         public static final RegistryObject<SoundEvent> CAT_EAT_BABY = createSoundEvent("entity/baby_cat_eat");
         public static final RegistryObject<SoundEvent> CAT_BEG_FOR_FOOD_BABY = createSoundEvent("entity/baby_cat_beg_for_food");
+        // Chicken
+        public static final RegistryObject<SoundEvent> CHICKEN_AMBIENT_BABY = createSoundEvent("entity/chicken_baby_ambient");
+        public static final RegistryObject<SoundEvent> CHICKEN_HURT_BABY = createSoundEvent("entity/chicken_baby_hurt");
+        public static final RegistryObject<SoundEvent> CHICKEN_DEATH_BABY = createSoundEvent("entity/chicken_baby_death");
+        // Horse
+        public static final RegistryObject<SoundEvent> HORSE_BREATHE_BABY = createSoundEvent("entity/horse_breathe_baby");
+        public static final RegistryObject<SoundEvent> HORSE_AMBIENT_BABY = createSoundEvent("entity/horse_ambient_baby");
+        public static final RegistryObject<SoundEvent> HORSE_DEATH_BABY = createSoundEvent("entity/horse_death_baby");
+        public static final RegistryObject<SoundEvent> HORSE_EAT_BABY = createSoundEvent("entity/horse_eat_baby");
+        public static final RegistryObject<SoundEvent> HORSE_HURT_BABY = createSoundEvent("entity/horse_hurt_baby");
+        public static final RegistryObject<SoundEvent> HORSE_ANGRY_BABY = createSoundEvent("entity/horse_angry_baby");
+        public static final RegistryObject<SoundEvent> HORSE_LAND_BABY = createSoundEvent("entity/horse_land_baby");
+        public static final RegistryObject<SoundEvent> HORSE_STEP_BABY = createSoundEvent("entity/horse_step_baby");
+        // Pig
         public static final RegistryObject<SoundEvent> PIG_AMBIENT_BABY = createSoundEvent("entity/baby_pig_ambient");
         public static final RegistryObject<SoundEvent> PIG_HURT_BABY = createSoundEvent("entity/baby_pig_hurt");
         public static final RegistryObject<SoundEvent> PIG_DEATH_BABY = createSoundEvent("entity/baby_pig_death");
         public static final RegistryObject<SoundEvent> PIG_STEP_BABY = createSoundEvent("entity/baby_pig_step");
+        // Turtle
         public static final RegistryObject<SoundEvent> TURTLE_HURT_BABY = createSoundEvent("entity/turtle_hurt_baby");
         public static final RegistryObject<SoundEvent> TURTLE_DEATH_BABY = createSoundEvent("entity/turtle_death_baby");
         public static final RegistryObject<SoundEvent> TURTLE_SHAMBLE_BABY = createSoundEvent("entity/turtle_shamble_baby");
+        // Wolf
+        public static final RegistryObject<SoundEvent> WOLF_STEP_BABY = createSoundEvent("entity/wolf_step_baby");
+        public static final RegistryObject<SoundEvent> WOLF_HURT_BABY = createSoundEvent("entity/wolf_hurt_baby");
+        public static final RegistryObject<SoundEvent> WOLF_DEATH_BABY = createSoundEvent("entity/wolf_death_baby");
+        public static final RegistryObject<SoundEvent> WOLF_GROWL_BABY = createSoundEvent("entity/wolf_growl_baby");
+        public static final RegistryObject<SoundEvent> WOLF_AMBIENT_BABY = createSoundEvent("entity/wolf_ambient_baby");
+        public static final RegistryObject<SoundEvent> WOLF_WHINE_BABY = createSoundEvent("entity/wolf_whine_baby");
+        public static final RegistryObject<SoundEvent> WOLF_PANT_BABY = createSoundEvent("entity/wolf_pant_baby");
+        // Golden Dandelion
         public static final RegistryObject<SoundEvent> GOLDEN_DANDELION_USE = createSoundEvent("item/golden_dandelion_use");
         public static final RegistryObject<SoundEvent> GOLDEN_DANDELION_UNUSE = createSoundEvent("item/golden_dandelion_unuse");
 

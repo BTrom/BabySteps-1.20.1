@@ -2,6 +2,7 @@ package com.botrom.babysteps.client.renderers.layers;
 
 import com.botrom.babysteps.client.models.BabyCatModel;
 import com.botrom.babysteps.client.renderers.BabyCatRenderer;
+import com.botrom.babysteps.utils.BabyConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.CatModel;
 import net.minecraft.client.model.geom.EntityModelSet;
@@ -28,7 +29,7 @@ public class BabyCatCollarLayer extends RenderLayer<Cat, CatModel<Cat>> {
         if (entity.isTame() && !entity.isInvisible()) {
             float[] colors = entity.getCollarColor().getTextureDiffuseColors();
 
-            if (entity.isBaby()) {
+            if (entity.isBaby() && BabyConfig.enableBabyCat) {
                 this.getParentModel().copyPropertiesTo(this.babyCollarModel);
                 this.babyCollarModel.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
                 this.babyCollarModel.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);

@@ -2,6 +2,7 @@ package com.botrom.babysteps.client.renderers.layers;
 
 import com.botrom.babysteps.client.models.BabySheepModel;
 import com.botrom.babysteps.client.renderers.BabySheepRenderer;
+import com.botrom.babysteps.utils.BabyConfig;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.SheepModel;
 import net.minecraft.client.model.geom.EntityModelSet;
@@ -17,24 +18,19 @@ public class BabySheepWoolLayer extends RenderLayer<Sheep, SheepModel<Sheep>> {
 
     public BabySheepWoolLayer(RenderLayerParent<Sheep, SheepModel<Sheep>> renderer, EntityModelSet modelSet) {
         super(renderer);
-        // 2. We reuse the BABY_SHEEP model definition so the wool matches the body shape.
-        // If you see "Z-fighting" (flickering), you may need to register a separate model layer with slight inflation.
         this.model = new BabySheepModel<>(modelSet.bakeLayer(BabySheepRenderer.BABY_SHEEP));
     }
 
     @Override
     public void render(PoseStack poseStack, MultiBufferSource buffer, int packedLight, Sheep entity, float limbSwing, float limbSwingAmount, float partialTick, float ageInTicks, float netHeadYaw, float headPitch) {
-        // Only render this layer if it is a baby and not invisible
-        if (!entity.isBaby() || entity.isInvisible()) {
+        if (!entity.isBaby() || entity.isInvisible() || !BabyConfig.enableBabySheep) {
             return;
         }
 
-        // 3. Sync the wool model's pose with the main body model
         this.getParentModel().copyPropertiesTo(this.model);
         this.model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTick);
         this.model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
 
-        // 4. Calculate Color (Rainbow "jeb_" or Dye Color)
         float r, g, b;
         if (entity.hasCustomName() && "jeb_".equals(entity.getName().getString())) {
             int offset = entity.tickCount / 25 + entity.getId();
@@ -54,7 +50,6 @@ public class BabySheepWoolLayer extends RenderLayer<Sheep, SheepModel<Sheep>> {
             b = color[2];
         }
 
-        // 5. Render the wool with the calculated color
         renderColoredCutoutModel(this.model, BabySheepRenderer.BABY_WOOL_TEXTURE, poseStack, buffer, packedLight, entity, r, g, b);
     }
 }

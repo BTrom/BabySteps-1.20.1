@@ -38,10 +38,8 @@ public abstract class BabyFoxRendererMixin extends MobRendererMixin<Fox, FoxMode
 
     @Inject(method = "<init>", at = @At("RETURN"))
     private void bs$initLayers(EntityRendererProvider.Context context, CallbackInfo ci) {
-        if (BabyConfig.enableBabyFox) {
-            this.layers.removeIf(layer -> layer instanceof FoxHeldItemLayer);
-            this.addLayer(new BabyFoxHeldItemLayer((FoxRenderer) (Object) this, context.getItemInHandRenderer()));
-        }
+        this.layers.removeIf(layer -> layer instanceof FoxHeldItemLayer);
+        this.addLayer(new BabyFoxHeldItemLayer((FoxRenderer) (Object) this, context.getItemInHandRenderer()));
     }
 
     @Inject(

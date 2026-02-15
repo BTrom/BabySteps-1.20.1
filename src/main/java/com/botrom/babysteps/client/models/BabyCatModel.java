@@ -52,10 +52,6 @@ public class BabyCatModel<T extends Cat> extends CatModel<T> {
         return LayerDefinition.create(meshdefinition, 32, 32);
     }
 
-    /**
-     * CRITICAL FIX: Bypass AgeableHierarchicalModel's automatic baby scaling.
-     * This model is already modeled at baby size.
-     */
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
         poseStack.pushPose();
@@ -76,21 +72,19 @@ public class BabyCatModel<T extends Cat> extends CatModel<T> {
         return Collections.emptyList();
     }
 
+    @Override
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.root.getAllParts().forEach(ModelPart::resetPose);
 
         float partialTick = ageInTicks - entity.tickCount;
-        float ageScale = entity.getScale();
 
         if (entity.isCrouching()) {
             this.body.y += 1.0F;
             this.head.y += 2.0F;
             this.tail1.y += 1.0F;
             this.tail2.y += -4.0F;
-            // Adjusted logic slightly as simple += ageScale might be tiny
         }
 
-        // Basic Head rotation
         this.head.xRot = headPitch * 0.017453292F;
         this.head.yRot = netHeadYaw * 0.017453292F;
 
